@@ -1,0 +1,115 @@
+﻿html, body {
+    height: 100%;
+}
+
+.Laughter {
+    font-size:100px;
+    display: inline;
+    font-family: 'Kiona Regular';
+    font-size: 5em;
+    font-weight: 100;
+    color: black;
+    text-shadow: 14px 14px 0 yellow, 14px -14px 0 magenta, -14px 14px 0 cyan;
+    filter: blur(4px);
+}
+
+
+.testShow
+{
+    opacity:0;
+    transition: 1s;
+}
+
+.youtube {
+    opacity: 0;
+    transition: 1s;
+}
+
+.instagram {
+    opacity: 0;
+    transition: 1s;
+}
+
+.avacado {
+    opacity: 0;
+    transition: 1s;
+}
+
+
+.spotify {
+    opacity: 0;
+    transition: 1s;
+}
+
+
+
+.PictureColor {
+    background-color: #349a90;
+    min-height: 500px;
+}
+
+.headerImage {
+    color: white;
+    font-size:40px;
+    font-family: 'Montserrat', sans-serif;
+    transition: 1s;
+}
+.kanyeWest {
+    color: white;
+    font-size: 30px;
+    transition: 1s;
+    font-family: 'Montserrat', sans-serif;
+}
+.show {
+    opacity: 1;
+    font-size: 60px;
+}
+
+
+
+.makeKanyeBigger {
+    font-size: 60px;
+}
+
+
+
+.FrontTitle {
+    background-color: #ffd800;
+    min-height: 500px;
+}
+
+.VideoColor {
+    background-color: #ec8888;
+    min-height: 500px;
+}
+
+.RjgramColor {
+    background-color: #d4c3d8;
+    min-height: 500px;
+}
+.Everything {
+    background-color: #d8c3c3;
+    min-height: 500px;
+}
+
+.Everything2 {
+    background-color: #d8c3c3;
+    min-height: 25px;
+}
+
+
+
+.single-tween-item{
+
+}
+
+
+.showWords {
+    font: 100px;
+}
+
+
+.row {
+    margin: auto;
+}
+

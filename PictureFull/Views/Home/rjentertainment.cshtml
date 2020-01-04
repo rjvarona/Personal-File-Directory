@@ -1,0 +1,181 @@
+﻿
+@model PictureFull.Models.EntertainmentViewModel
+
+@{
+    ViewBag.Title = "rjentertainment";
+}
+
+<link href="~/Content/rjentertainment.css" rel="stylesheet" />
+<script src="~/Scripts/bootstrap-select.js"></script>
+
+
+<section class="all">
+    <div class="parallax">
+    </div>
+    <div class="panel customblock">
+        <div class="panel-heading col-md-12">
+
+
+        </div>
+
+        <div class="panel-body col-md-12">
+            <div class="filters">
+                <div class="col-md-4">
+                    <h2 class="headerEffect">location</h2>
+                    <select class="filters-location" id="simple" value-group="location">
+                        @foreach (var item in Model.Locations)
+                        {
+
+                            <option value=".@item.location_name"> @item.location_name</option>
+                        }
+                    </select>
+                </div>
+
+                <div class="col-md-4">
+                    <h2 class="headerEffect">category</h2>
+                    <select class="filters-category  slct">
+                        @foreach (var item in Model.categories)
+                        {
+
+                            <option value=".@item.category_name"> @item.category_name</option>
+                        }
+                    </select>
+                </div>
+
+                <div class="col-md-4">
+                    <h2 class="headerEffect">    publishers</h2>
+                    <select class="filters-category  slct" value-group="publisher">
+                        @foreach (var item in Model.Publishers)
+                        {
+
+                            <option value=".@item.publisher_name"> @item.publisher_name</option>
+                        }
+                    </select>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <button class="button-reset" onclick="reset()">
+                    reset
+                </button>
+            </div>
+
+        </div>
+
+    </div>
+
+    @*<iframe width="560" height="315" src="https://www.youtube.com/embed/87i2wVJqfWI" frameborder="0"
+            allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/1k8c7u33etE" frameborder="0"
+            allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>*@
+    
+    <div class="row grid ">
+        <div class="">
+
+            <div class="col-md-12 ">
+                @foreach (var item in Model.Entertainments)
+                {
+
+                    if (item.Type_type_id == 1)
+                    {
+
+
+                        <div class="container customblock">
+                            <div class="col-md-4  item @item.location_name @item.publisher_name
+                         @foreach (var item2 in item.allCategories)
+                         {
+                             @item2.category_name.Insert(0, " ");
+                         }
+
+                         panel ">
+                                <div class="panel-heading">
+                                    <h2 style="text-align: center;" class="headerEffect">@item.title</h2>
+                                </div>
+
+                                <div class="panel-body test1">
+
+                                    <div class="video-cover">
+                                        <video width="480" id="video" controls autoplay muted loop>
+                                            <source src="@Url.Content(item.file_location)" type="video/webm">
+                                            <source src="@Url.Content(item.file_location)" type="video/mp4">
+                                            <source src="@Url.Content(item.file_location)" type="video/ogg">
+                                            Your browser doesn't support HTML5 video tag.
+                                        </video>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    }
+                    else if (item.Type_type_id == 2)
+                    {
+                        <div class="container customblock">
+                            <div class="col-md-4  item @item.location_name @item.publisher_name
+                         @foreach (var item2 in item.allCategories)
+                         {
+                             @item2.category_name.Insert(0, " ");
+                         }
+
+
+                         panel">
+                                <div class="panel-heading">
+                                    <h2 style="text-align: center;" class="headerEffect">@item.title</h2>
+                                </div>
+
+                                <div class="panel-body test1">
+                                    <div id="container">
+
+                                        <a href="@Url.Content(item.file_location)" data-toggle="lightbox" data-gallery="example-gallery">
+                                            <img class="scaledDown col-md-offset-3" src="@Url.Content(item.file_location)"></img>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    }
+
+                    else if (item.Type_type_id == 3)
+                    {
+
+
+                        <div class="container customblock">
+                            <div class="col-md-4 item  @item.location_name @item.publisher_name
+                         @foreach (var item2 in item.allCategories)
+                         {
+                             @item2.category_name.Insert(0, " ");
+                         }
+                          panel">
+                                <div class="panel-heading">
+                                    <h2 style="text-align: center;" class="headerEffect">@item.title</h2>
+                                </div>
+                                <div class="panel-body test1">
+                                    <p><img src="~/images/pew%20pew%20pew%20pew2.png" style="width:50%; height:50%;" class="col-md-offset-3" /></p>
+                                    <audio controls="controls" class="col-md-offset-3">
+
+                                        <source src="@Url.Content(item.file_location)" type="audio/mpeg" />
+                                    </audio>
+                                </div>
+                            </div>
+                        </div>
+                    }
+                    else if(item.Type_type_id == 4)
+                    {
+                        <div>
+                            <iframe width="560" height="315" src="@item.file_location" frameborder="0"
+                                    allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                        </div>
+                    }
+
+                    else{ }
+                }
+            </div>
+        </div>
+    </div>
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+</section>

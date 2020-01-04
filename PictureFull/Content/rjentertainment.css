@@ -1,0 +1,66 @@
+﻿body {
+}
+.customblock {
+ 
+}
+
+
+.parallax {
+    /* The image used */
+    background-image: url('../images/test1.jpg');
+    min-height: 1200px;
+    /* Create the parallax scrolling effect */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+
+
+
+#video-viewport {
+    position: absolute;
+    top: 0;
+    left: 0;
+    overflow: hidden;
+    z-index: -1; /* for accessing the video by click */
+}
+
+.resp-container {
+    position: relative;
+    overflow: hidden;
+    padding-top: 56.25%;
+}
+
+.resp-iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: 0;
+}
+
+.scaledDown {
+    object-fit: cover;
+    width: 300px;
+    height: 250px;
+}
+
+video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.video-cover {
+    position: relative;
+    height: 200px;
+    overflow: hidden;
+}
+img {
+    image-orientation: 90deg;
+}

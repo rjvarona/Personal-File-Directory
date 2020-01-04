@@ -1,0 +1,164 @@
+﻿@{
+    ViewBag.Title = "Home Page";
+}
+<link href="~/Content/Index.css" rel="stylesheet" />
+<link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+
+<div class="parallax"></div>
+
+
+<section class="FrontTitle">
+    <div class="row col-md-12">
+        <div class="col-md-4 col-md-offset-2">
+            <img style="max-height:500px;" src="~/images/giphy.gif" />
+        </div>
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <div class="col-md-6">
+            <h3 class="Laughter"> Prepare to Laugh </h3>
+        </div>
+    </div>
+</section>
+
+<section class="PictureColor">
+    
+        <br />
+        <br />
+        <br />
+        <br />
+     
+        <div>
+            <div class="col-md-6  spotify" onclick="rjDirect">
+                <a href='@Url.Action("rjentertainment", "Home", new {type = "Music" })'>
+
+                    <img class="col-md-offset-4" src="https://img.icons8.com/color/250/000000/spotify.png" style="font-size:200px; text-align:center;">
+
+                    <h1 class="col-md-offset-5" style=" color:black; font-family: 'Montserrat', sans-serif;">Rjotify</h1>
+                </a>
+            </div>
+            <br />
+            <br />
+            <section class="section col-md-6 ">
+                <div class="single-tween-item">
+                    <article data-scrollmagic>
+                        <h3 class="headerImage ">"I only listen to Rjotify"</h3>
+                        <p class="kanyeWest">~Kanye West</p>
+                    </article>
+                </div>
+            </section>
+        </div>
+</section>
+<section>
+    <div class="VideoColor">
+        <br />
+        <br />
+        <br />
+        <br />
+
+        <div>
+            <div class="col-md-6  youtube" onclick="rjDirect">
+                <a href='@Url.Action("rjentertainment", "Home", new {type = "Video" })'>
+
+                    <img class="col-md-offset-4" src="https://img.icons8.com/color/250/000000/youtube-play.png" style="font-size:200px; text-align:center;">
+
+                    <h1 class="col-md-offset-5" style=" color:black; font-family: 'Montserrat', sans-serif;">Rjtube</h1>
+                </a>
+            </div>
+            <br />
+            <br />
+            <section class="section col-md-6 ">
+                <div class="single-tween-item">
+                    <article data-scrollmagic>
+                        <h3 class="headerImage">"T series doesn't copystrike me on Rjtube"</h3>
+                        <p class="kanyeWest">~PewDiePie</p>
+                    </article>
+                </div>
+            </section>
+        </div>
+    </div>
+
+</section>
+<section>
+    <div class="RjgramColor">
+        <br />
+        <br />
+        <br />
+        <br />
+
+        <div>
+            <div class="col-md-6  instagram" onclick="rjDirect">
+                <a href='@Url.Action("rjentertainment", "Home", new {type = "Picture" })'>
+
+                    <img class="col-md-offset-4" src="https://img.icons8.com/color/250/000000/instagram-new.png" style="font-size:200px; text-align:center;">
+
+                    <h1 class="col-md-offset-5" style=" color:black; font-family: 'Montserrat', sans-serif;">Rjgram</h1>
+                </a>
+            </div>
+            <br />
+            <br />
+            <section class="section col-md-6 ">
+                <div class="single-tween-item">
+                    <article data-scrollmagic>
+                        <h3 class="headerImage ">"Oof"</h3>
+                        <p class="kanyeWest">~Roblox character</p>
+                    </article>
+                </div>
+            </section>
+        </div>
+    </div>
+
+</section>
+<section>
+    <div class="Everything">
+        <br />
+        <br />
+        <br />
+        <br />
+
+        <div>
+            <div class="col-md-6  avacado" onclick="rjDirect">
+                <a href='@Url.Action("rjentertainment", "Home")'>
+
+                    <img class="col-md-offset-4" src="https://img.icons8.com/cotton/250/000000/avocado.png" style="font-size:200px; text-align:center;">
+
+                    <h1 class="col-md-offset-5" style=" color:black; font-family: 'Montserrat', sans-serif;">Rjavacado</h1>
+                </a>
+            </div>
+            <br />
+            <br />
+            <section class="section col-md-6 single-tween-item">
+                <div class="">
+                    <article data-scrollmagic>
+                        <h3 class="headerImage ">"おまえ わ もう しんでいる"</h3>
+                        <p class="kanyeWest">~Goku Luffy Uzamaki</p>
+                    </article>  
+                </div>
+            </section>
+
+        </div>
+        
+    </div>
+
+    <footer class="Everything2">
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <p>
+            <a href='@Url.Action("rjentertainment", "Home", new {type = "Karaoke" })'>
+                &copy; @DateTime.Now.Year - RJ Varona
+            </a>
+        </p>
+    </footer>
+
+</section>

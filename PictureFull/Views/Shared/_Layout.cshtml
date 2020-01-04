@@ -1,0 +1,70 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Title - My ASP.NET Application</title>
+    @Styles.Render("~/Content/css")
+   
+
+
+    <link href="~/Content/font-awesome.css" rel="stylesheet" />
+    @Scripts.Render("~/bundles/modernizr")
+</head>
+<body>
+    <div class=" navbar-inverse navbar-fixed-top" style="background-color:white;">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                @Html.ActionLink("rjentertainment", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
+            </div>
+
+
+            <div class="navbar-collapse collapse">
+                @*<ul class="nav navbar-nav">
+                        <li>@Html.ActionLink("Home", "Index", "Home")</li>
+                        <li>@Html.ActionLink("About", "About", "Home")</li>
+                        <li>@Html.ActionLink("Contact", "Contact", "Home")</li>
+                    </ul>*@
+                <div class="navbar-form navbar-right">
+                    @using (Html.BeginForm("rjentertainment", "Home", FormMethod.Get))
+                    {
+                        <ul class="nav navbar-nav">
+                            <li>@Html.TextBox("searchValue", ViewBag.CurrentFilter as string)</li>
+                            <li><input type="submit" value="Search" /></li>
+                        </ul>
+                    }
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <div class="  body-content">
+        @RenderBody()
+        @*<hr />*@
+        @*<footer>
+                <p>&copy; @DateTime.Now.Year - My ASP.NET Application</p>
+            </footer>*@
+    </div>
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/bootstrap")
+    @Scripts.Render("~/Scripts/isotope.pkgd.min.js")
+
+    @Scripts.Render("~/Scripts/ekko-lightbox.min.js")
+    @Scripts.Render("~/Scripts/video.js")
+    @Scripts.Render("~/Scripts/bootstrap-select.js")
+    @RenderSection("scripts", required: false)
+    <script src="//cdnjs.cloudflare.com/ajax/libs/gsap/2.1.2/TweenMax.min.js"></script>
+    @Scripts.Render("~/Scripts/ScrollMagic.min.js")
+    @Scripts.Render("~/Scripts/debug.addIndicators.min.js")
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.5/plugins/animation.gsap.js"></script>
+    @Scripts.Render("~/Scripts/rjentertainment.js")
+    @Scripts.Render("~/Scripts/Index.js")
+
+    <script src="./js/animation.gsap.js"></script>
+</body>
+</html>
