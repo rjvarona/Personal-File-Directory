@@ -72,3 +72,5 @@ C:\Users\rjvar\documents\visual studio 2017\Projects\PictureFull\bin\Dapper.xml
 C:\Users\rjvar\documents\visual studio 2017\Projects\PictureFull\obj\Debug\PictureFull.csprojAssemblyReference.cache
 C:\Users\rjvar\documents\visual studio 2017\Projects\PictureFull\obj\Debug\PictureFull.csproj.CoreCompileInputs.cache
 C:\Users\rjvar\documents\visual studio 2017\Projects\PictureFull\obj\Debug\PictureFull.csproj.CopyComplete
+R:\ghMemeLoader\PictureFull\obj\Debug\PictureFull.dll
+R:\ghMemeLoader\PictureFull\obj\Debug\PictureFull.pdb
